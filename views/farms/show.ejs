@@ -12,7 +12,19 @@
         <title>
             <%= farm.name %>
         </title>
+        <style>
+            body {
+            height: 100vh;
+            background-image: 
+            /* linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), */
+            url("https://images.unsplash.com/photo-1619460614945-b75032e64548?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c3VubnklMjBuYXR1cmV8ZW58MHx8MHx8fDA%3D&w=1000&q=80");
+            background-size: cover;
+            background-position: center;
+            box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+            }
+        </style>
     </head>
+    
 
     <body>
         <div class="card" style="width: 88rem;">
@@ -30,7 +42,7 @@
             <h5 class="card-title">Products</h5>
             <ul class="list-group list-group-flush">
                 <% for(let product of farm.products) {%>
-                    <li class="list-group-item"><a href="/products/<%=product._id%>">
+                    <li class="list-group-item text-uppercase"><a href="/products/<%=product._id%>">
                             <%=product.name%>
                         </a></li>
                     <% } %>

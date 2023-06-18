@@ -10,19 +10,30 @@
             integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
             crossorigin="anonymous"></script>
         <title>All Farms</title>
+        <style>
+            body {
+            height: 100vh;
+            background-image: 
+            /* linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), */
+            url("https://images.unsplash.com/photo-1619460614945-b75032e64548?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c3VubnklMjBuYXR1cmV8ZW58MHx8MHx8fDA%3D&w=1000&q=80");
+            background-size: cover;
+            background-position: center;
+            box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+            }
+        </style>
     </head>
 
     <body>
         <div class="card" style="width: 88rem;">
 
-            <div class="card-body shadow p-3 mb-5 bg-body-tertiary rounded">
+            <div style="background-color:beige;"class="card-body shadow p-3 mb-5 bg-body-tertiary rounded">
                 <h5 class="card-title text-primary-emphasis text-uppercase">Farms</h5>
                 <p class="card-text">Here are all the farms in the area</p>
             </div>
             
             <ul class="list-group list-group-flush">
                 <% for(let farm of farms) { %>
-                    <li class="list-group-item"><a href="/farms/<%=farm._id%>">
+                    <li class="list-group-item text-uppercase"><a href="/farms/<%=farm._id%>">
                             <%= farm.name %>
                         </a></li>
                     <% }%>
